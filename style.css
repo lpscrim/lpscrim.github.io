@@ -1,0 +1,86 @@
+* {
+    text-align: center;
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+   ;
+}
+
+body {
+    background-color: rgba(235, 223, 223, 0.877)
+}
+
+.banner {
+    background-image: url("Images/Yotei.JPG");
+    background-size:cover;
+    background-position: bottom center;
+    height:300px;
+    width: 100%;
+    
+}
+
+.banner .content{
+    color:floralwhite;
+    position: relative;
+    top: 200px;
+    width: 300px;
+    margin: 0 auto;
+    /*border: 1px solid blanchedalmond;
+    border-radius: 20px ;
+    height: 60px;*/
+}
+
+h1 {
+    color:blanchedalmond;
+    opacity: 0.01;
+    transition: all 2s ease-in-out;
+    font-size:30;
+}
+.banner:hover h1 {
+    opacity: 0.6;
+    }
+
+nav {
+    list-style-type: none;
+    text-align: center; 
+    padding: 0;
+    margin: 0 ;
+    
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 30;
+}
+
+nav li a {
+    color: rgba(95, 97, 96, 0.5);
+}
+nav li a:hover {
+    color: rgba(95, 97, 96, 1);
+    cursor: pointer;
+}
+
+.container { 
+    display: flex;
+    justify-content: center;
+    
+}
+
+.sphere {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    border-radius: 100px;
+    max-width: 300px;
+    min-width: 100px;
+    
+}
+
+.thumb {
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    border-radius: 10px;
+    max-width: 300px;
+    min-width: 80px;
+}
