@@ -1,54 +1,60 @@
-* {
+html, body {
     text-align: center;
     font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(235, 223, 223, 0.877);
+    font-size: 16px;
    ;
 }
 
-body {
-    background-color: rgba(235, 223, 223, 0.877)
+.container { 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
-.banner {
-    background-image: url("Images/Yotei.JPG");
-    background-size:cover;
-    background-position: bottom center;
-    height:300px;
+.box {
+    display: inline-flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.title {
+    display: flex;
+    flex-direction: column;
+    height: 20%;
+    align-items: center;
+}
+
+.title h3 {
+    margin: auto;
+    font-size: 2rem;
+    color: rgb(65, 62, 51);
+    font-family:monospace;
+}
+
+/* NAV ETC */
+
+header {
+    top: 0px;
     width: 100%;
-    
+    background-color: rgba(235, 223, 223, 0.877);
+    position: fixed;
+    z-index: 999;
 }
-
-.banner .content{
-    color:floralwhite;
-    position: relative;
-    top: 200px;
-    width: 300px;
-    margin: 0 auto;
-    /*border: 1px solid blanchedalmond;
-    border-radius: 20px ;
-    height: 60px;*/
-}
-
-h1 {
-    color:blanchedalmond;
-    opacity: 0.01;
-    transition: all 2s ease-in-out;
-    font-size:30;
-}
-.banner:hover h1 {
-    opacity: 0.6;
-    }
 
 nav {
     list-style-type: none;
     text-align: center; 
     padding: 0;
     margin: 0 ;
-    
+    float: left;
 }
 
 nav li {
     display: inline-block;
-    margin: 0 30;
+    margin: 0 10;
+    font-size: 0.75rem;;
 }
 
 nav li a {
@@ -59,28 +65,111 @@ nav li a:hover {
     cursor: pointer;
 }
 
-.container { 
+/*BANNER ETC*/
+
+.banner {
     display: flex;
-    justify-content: center;
+    background: url("Images/Storr.jpg") no-repeat center fixed;
+    background-size: cover;
+    height: 100%; 
+    width: auto;
+    align-items: center;
+}
+
+.banner .content{
+    color:floralwhite;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#lewis {
+    color:blanchedalmond;
+    opacity: 0;
+    transition: all 2s ease-in-out;
+    font-size:4.5rem;
+    letter-spacing: 8px;
+}
+.banner:hover #lewis {
+    opacity: 0.6;
+    }
+
+/*INTRO*/
+
+#intro .container {
+    display: flex;
+    background: url("Images/Sunset.jpg") no-repeat center fixed;
+    background-size: cover;
+    height: 80%; 
+    width: auto;
+    align-items: center;
+    z-index: 1;
+}
+#intro .content {
+    background-color: rgba(104, 170, 148, 0.493);
+    flex-direction: column;
+    padding: 1% 5% 2%;
+    border: 1px solid rgba(255, 255, 255, 0.116);
+    border-radius: 1rem;
+    color:rgb(255, 241, 218);
+    font-weight: bold;
+    line-height: 1.5;
+    letter-spacing: 1.2;
+    z-index: 10;
+    backdrop-filter: blur(5px);
+}
+
+#intro h4{
+    font-size: 1.8rem;
+}
+#intro p {
+    font-size: 1.2rem;
+}
+
+/*SPHERE*/
+
+#art .container {
+    background: url("Images/Sunset.jpg") fixed center no-repeat;
+    background-size: cover;
+    background-position: top;
     
+}
+
+#art .box, #art .sub {
+    background-color: rgba(197, 182, 182, 0.623);
+    z-index: 10;
+    backdrop-filter: blur(4px);
+}
+
+#art .sub {
+    font-size: 1.5rem;
+    color:blanchedalmond;
+    letter-spacing: 1.2;
 }
 
 .sphere {
-    margin-left: auto;
-    margin-right: auto;
-    width: 60%;
+    display: flex;
+    margin: 1rem auto;
+    width: 85%;
+    height:auto;
     border-radius: 100px;
-    max-width: 300px;
+    max-width: 350px;
     min-width: 100px;
-    
 }
 
-.thumb {
+/*PHOTO*/
 
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
-    border-radius: 10px;
-    max-width: 300px;
-    min-width: 80px;
+.thumb {
+    margin: 1rem 1rem;
+    border-radius: 5px;
+    max-width: 500px;
+    min-width: 200px;
+    height: auto;
+    aspect-ratio: 16/9;
+}
+
+.sq {
+    aspect-ratio: 1/1;
+    height: 281.25px;
+    width: 500px;
+    object-fit: cover;
 }
