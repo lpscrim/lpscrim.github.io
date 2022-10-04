@@ -1,3 +1,5 @@
+/* GENERAL */
+
 html, body {
     text-align: center;
     font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -33,12 +35,29 @@ html, body {
     font-family:monospace;
 }
 
+.button {
+    text-decoration: none;
+    border-radius: 20px;
+    color:rgb(252, 242, 228);
+    padding: 10px;
+    font-weight: 800;
+    background-color: rgb(106, 201, 169);
+}
+.button:hover {
+    color:rgb(230, 128, 224);
+    background-color: rgba(84, 172, 142, 0.986);
+}
+.button:active {
+    transform: translateY(1px);
+    filter: saturate(150%);
+}
+
 /* NAV ETC */
 
 header {
     top: 0px;
     width: 100%;
-    background-color: rgba(235, 223, 223, 0.877);
+    background-color: rgba(235, 223, 223, 0.952);
     position: fixed;
     z-index: 999;
 }
@@ -48,7 +67,7 @@ nav {
     text-align: center; 
     padding: 0;
     margin: 0 ;
-    float: left;
+    float: right;
 }
 
 nav li {
@@ -58,14 +77,41 @@ nav li {
 }
 
 nav li a {
-    color: rgba(95, 97, 96, 0.5);
+    color: rgb(68, 61, 52);
+    text-decoration: none;
+    letter-spacing: 1.1;
 }
 nav li a:hover {
-    color: rgba(95, 97, 96, 1);
+    color: rgb(230, 128, 224);
     cursor: pointer;
 }
 
-/*BANNER ETC*/
+#logo {
+    float: left;
+    display: inline-flex
+}
+
+#logo img {
+    width: 40px;
+    height: auto;
+    aspect-ratio: 1/1;
+    border-radius: 500px;
+    margin:5px;
+}
+
+
+#logo span {
+    display: flex;
+    margin: 10px;
+    align-self: center;
+    font-size: 0.7rem;
+    font-weight: 750;
+    letter-spacing: 3;
+    color: rgb(68, 61, 52);
+}
+
+
+/* BANNER ETC */
 
 .banner {
     display: flex;
@@ -93,11 +139,11 @@ nav li a:hover {
     opacity: 0.6;
     }
 
-/*INTRO*/
+/* INTRO */
 
 #intro .container {
     display: flex;
-    background: url("Images/Sunset.jpg") no-repeat center fixed;
+    background: url("Images/Storr.jpg") no-repeat center fixed;
     background-size: cover;
     height: 80%; 
     width: auto;
@@ -111,9 +157,9 @@ nav li a:hover {
     border: 1px solid rgba(255, 255, 255, 0.116);
     border-radius: 1rem;
     color:rgb(255, 241, 218);
-    font-weight: bold;
+    font-weight: 500;
     line-height: 1.5;
-    letter-spacing: 1.2;
+    letter-spacing: 1.1;
     z-index: 10;
     backdrop-filter: blur(5px);
 }
@@ -125,38 +171,70 @@ nav li a:hover {
     font-size: 1.2rem;
 }
 
-/*SPHERE*/
+/* SPHERE */
 
 #art .container {
-    background: url("Images/Sunset.jpg") fixed center no-repeat;
+    background: url("Images/Storr.jpg") fixed center no-repeat;
     background-size: cover;
     background-position: top;
     
 }
 
 #art .box, #art .sub {
-    background-color: rgba(197, 182, 182, 0.623);
+    background-color: rgba(197, 182, 182, 0.253);
     z-index: 10;
     backdrop-filter: blur(4px);
 }
 
-#art .sub {
+.sub {
     font-size: 1.5rem;
     color:blanchedalmond;
     letter-spacing: 1.2;
 }
 
 .sphere {
+    left: 0px;
+    top: 0px;
     display: flex;
+    position: relative;
     margin: 1rem auto;
     width: 85%;
     height:auto;
-    border-radius: 100px;
+    border-radius: 200px;
     max-width: 350px;
     min-width: 100px;
+    transition: all 0.1s ease-in-out;
 }
 
-/*PHOTO*/
+.draw {
+    left: 0px;
+    top: 0px;
+    display: flex;
+    position: relative;
+    margin: 1rem auto;
+    width: 85%;
+    height:auto;
+    border-radius: 20px;
+    max-width: 350px;
+    min-width: 100px;
+    transition: all 5ms ease-in;
+    aspect-ratio: 1/1;
+}
+
+.sphere:hover {
+    /*box-shadow: -3px 3px blanchedalmond;*/
+    filter: drop-shadow(-1.5px 1.5px blanchedalmond) brightness(105%);
+    left: 1.5px;
+    top: -1.5px;
+}
+
+.draw:hover {
+    box-shadow: -1.5px 1.5px blanchedalmond;
+    left: 1.5px;
+    top: -1.5px;
+    filter: brightness(105%);
+}
+/* PHOTO */
 
 .thumb {
     margin: 1rem 1rem;
@@ -165,6 +243,11 @@ nav li a:hover {
     min-width: 200px;
     height: auto;
     aspect-ratio: 16/9;
+    transition: all 0.5s ease-out;
+}
+
+.thumb:hover {
+    filter:brightness(110%);
 }
 
 .sq {
@@ -173,3 +256,176 @@ nav li a:hover {
     width: 500px;
     object-fit: cover;
 }
+
+/* MUSIC */
+
+iframe {
+    display: flex;
+    align-self: center;
+}
+
+/*#music .container {
+    background: url("Images/Sunset.jpg") fixed center no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+#music .box {
+    background-color: rgba(197, 182, 182, 0.521);
+    z-index: 10;
+    backdrop-filter: blur(40px);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}*/
+
+/* ARTIST */
+
+#artist .container {
+    background: url("Images/Storr.jpg") fixed center no-repeat;
+    background-size: cover;
+    background-position: top;
+    height: 80%; 
+    width: auto;
+    align-items: center;
+    z-index: 1;
+}
+#artist .content {
+    display:flex;
+    flex-direction: row;
+    background-color: rgba(104, 170, 148, 0.493);
+    padding: 2%;
+    border: 1px solid rgba(255, 255, 255, 0.116);
+    border-radius: 1rem;
+    color:rgb(255, 241, 218);
+    backdrop-filter: blur(5px);
+    margin:20% auto;
+    width:70%;
+    max-width: 800px;
+}
+#I {
+    display: flex;
+    height: auto;
+    width: 30%;
+    float: left;
+    border-radius: 5px;
+    flex-shrink: 1;
+} 
+
+#artist h4 {
+    font-size: 1.5rem;
+}
+#artist p {
+    font-size: 1.1rem;
+}
+#artist .textbox {
+    align-items: center;
+    width: 60%;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-self: center;
+    text-align: center;
+    line-height: 1.3;
+}
+/* MEDIA */
+
+@media screen and (max-width: 1000px) {
+    #artist .content {
+        flex-direction: column;
+    }
+    #I {
+        margin: auto;
+    }
+    #artist .textbox {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 563px) {
+    nav li {
+        display:none;
+    }
+    #intro h4 {
+        font-size: 1rem;
+    }
+    #intro p { 
+        font-size: 0.8rem;
+    }
+    .title h3 {
+        font-size: 1.5rem;
+    }
+    .thumb,.sq {
+        width: 50%;
+    }
+    .sq {
+        height: auto;
+        aspect-ratio: 16/9;
+    }    
+    #I img{
+        display: none;
+    }
+}
+@media screen and (max-width: 720px) {
+    #lewis {
+        font-size: 2rem;
+    }
+    #artist p, #artist H4{
+        font-size: 90%;
+    }
+    #artist .textbox {
+        width: 80%;
+    }
+
+}
+@media screen and (max-width: 420px) {
+}
+
+
+
+/* FORM */
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Add a background color and some padding around the form */
+  .formbox {
+    border-radius: 5px;
+    background-color: blanchedalmond;
+    padding: 20px;
+  }
+
+  .fa {
+    padding: 20px;
+    margin: 10px;
+    font-size: 30px;
+    width: 10px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 100%;
+  }
+
+ 
