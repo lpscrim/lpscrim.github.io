@@ -1,0 +1,111 @@
+/* GENERAL */
+
+html, body {
+    text-align: center;
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(235, 223, 223, 0.877);
+    font-size: 16px;
+   ;
+}
+
+.container { 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header {
+    top: 0px;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(7, 4, 4);
+    z-index: 999;
+}
+
+nav {
+    list-style-type: none;
+    text-align: center; 
+    padding: 0;
+    margin: 0 ;
+    float: right;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 10;
+    font-size: 0.75rem;;
+}
+
+nav li a {
+    color: rgb(245, 243, 240);
+    text-decoration: none;
+    letter-spacing: 1.1;
+}
+
+#logo {
+    float: left;
+    display: inline-flex
+}
+
+#logo img {
+    width: 40px;
+    height: auto;
+    aspect-ratio: 1/1;
+    border-radius: 500px;
+    margin:5px;
+}
+
+/* BANNER */
+
+.banner {
+    display: flex;
+    background: url("Images/Hanoidrw2.jpg") no-repeat center;
+    background-color: white;
+    background-size: 80%;
+    height: 100%; 
+    width: auto;
+    align-items: center;
+}
+
+.banner .content{
+    color:rgb(245, 244, 242);
+    background-color: rgba(0, 0, 0, 0.701);
+    width: 100%;
+    margin: 0 auto;
+    bottom: 0;
+}
+
+/* INTRO */
+
+#intro .container {
+    display: flex;
+/*    background: url("Images/Absract1.jpg") no-repeat center;
+    background-size: cover ;*/
+    height: 80%; 
+    width: auto;
+    align-items: center;
+    z-index: 1;
+}
+
+#intro .content {
+    background-color: rgba(250, 192, 105, 0.959);
+    flex-direction: column;
+    padding: 1% 5% 2%;
+    border: 1px solid rgba(255, 255, 255, 0.116);
+    border-radius: 1rem;
+    color:rgb(10, 8, 5);
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 1.1;
+    z-index: 10;
+    backdrop-filter: blur(1px);
+}
+
+#intro h4{
+    font-size: 1.8rem;
+}
+#intro p {
+    font-size: 1.2rem;
+}

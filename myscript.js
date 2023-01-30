@@ -1,17 +1,17 @@
 let artDiv = document.querySelector("#art")
 let photoDiv = document.querySelector("#photo")
 let musicDiv = document.querySelector("#music")
-let conta = artDiv.querySelector("#art .container")
-let contp = photoDiv.querySelector("#photo .container")
-let contm = document.querySelector("#music .container")
-
+let artistDiv = document.querySelector("#artist")
 
 artDiv.onmouseover = () => {
-    conta.style.display = "flex";
+    artDiv.querySelector(".container").style.display = "flex";
 }
 photoDiv.onmouseover = () => {
-    contp.style.display = "flex";
+    photoDiv.querySelector(".container").style.display = "flex";
 }
 musicDiv.onmouseover = () => {
-    contm.style.display = "flex";
+    musicDiv.querySelector(".container").style.display = "flex";
+}
+artistDiv.onmouseover = () => {
+    artistDiv.querySelector(".container").style.display = "flex";
 }
