@@ -1,3 +1,12 @@
+    /* Logo */
+    let num= 10;
+    let rotate = () => {
+        let logo = document.getElementById('logo');
+        
+        logo.style.transform = 'rotate(' + num + 'deg)';
+        num+= 10;
+    }    
+    
     /* counter */
     
     let timeSince = (date) => {
@@ -80,3 +89,4 @@
 }
 
     document.getElementById("type").onscroll = textEffect();
+
