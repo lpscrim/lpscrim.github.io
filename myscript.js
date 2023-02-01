@@ -1,3 +1,5 @@
+    /* counter */
+    
     let timeSince = (date) => {
 
     let secs = Math.floor((new Date() - date) / 1000);
@@ -47,3 +49,34 @@
     
     setInterval(counter, 1000);
     
+    /* Type effect */
+
+    
+    let index = 0;
+    let index2 =0;
+    let index3 = 0;
+
+    const text = 'I specialise in the creation of unique and personal projects.';
+    const text2 = 'Whether it`s WebApps, Websites, Art or Music.'
+    const text3 = 'Delivering creative solutions to any design specifications.'
+    let speed = 50;
+  
+    let textEffect = () => {
+    if (index < text.length) {
+        document.getElementById("type").innerHTML += text.charAt(index);
+        index++;
+    }
+    else if (index2 < text2.length) {
+        document.getElementById("type2").innerHTML += text2.charAt(index2);
+        index2++;
+        
+    }
+    else if (index3 < text3.length) {
+        document.getElementById("type3").innerHTML += text3.charAt(index3);
+        index3++;
+        
+    }
+    setTimeout(textEffect, speed);
+}
+
+    document.getElementById("type").onscroll = textEffect();
