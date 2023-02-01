@@ -12,12 +12,8 @@
 Thank you for visiting.
 
 1. Required fixes:
-  + Change about section to just be plain
-  + 
+  + add drop down for daydream about me at top
 
-2. JavaScript:
-  + Expanding parts of the page once clicked
-  + Moving parts upon mouse over
   
 3. Display and add code projects
 
