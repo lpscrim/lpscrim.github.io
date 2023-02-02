@@ -147,6 +147,18 @@ nav li a {
     font-size: 1.2rem;
 }
 
+.skill.container {
+    margin-top: 50px;
+    flex-direction: row;
+}
+.skill img {
+    margin: 5px 5px;
+    display: inline-flex;
+    width: 50px;
+    height:50px;
+    background-color: rgba(233, 223, 209, 0.774);
+    border-radius: 5px;
+}
 /* CODE */
 
 #projects .container {
