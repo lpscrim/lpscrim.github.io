@@ -119,7 +119,7 @@ nav li a {
 }
 #intro .container {
     display: flex;
-    height: 80%; 
+    height: 100%; 
     width: auto;
     align-items: center;
     z-index: 1;
@@ -175,7 +175,7 @@ nav li a {
 
 .codeProj img {
     width: 500px;
-    height: 400px;
+    aspect-ratio: 5/4;
     border-radius: 10px;
     display: inline-flex;
     margin: 5px 5px;
@@ -195,11 +195,11 @@ nav li a {
         font-size: 150%;
     }
     #logo {
-        width: 60px;
+        width: 50px;
     }
     
     .title h3 {
-        font-size: 1.2rem;
+        font-size: 1.6rem;
     }
     #lewis{
         font-size: 1.5rem;
@@ -207,15 +207,9 @@ nav li a {
     #job{
         font-size: 1rem;
     }
-    .resize {
-        ;
-    }
-    .resizep {
-        ;
-    }
-
+    
     .codeProj img {
-        width: 250px;
-        height: 200px;
+        width: 350px;
+       
     }
 }
