@@ -187,8 +187,13 @@ nav li a {
 /* MEDIA tags*/
 
 
-@media screen and (max-width: 570px) {
-
+@media screen and (max-width: 600px) {
+    .button { 
+        font-size: 120%;
+    }
+    header img { 
+        width: 150%;
+        height: 150%;}
     
     .title h3 {
         font-size: 1.2rem;
