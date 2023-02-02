@@ -13,6 +13,7 @@ Thank you for visiting.
 
 1. Required fixes:
   + add drop down for daydream about me at top
+  + make interactive cred card checker page.
 
   
 3. Display and add code projects
