@@ -16,6 +16,8 @@ html, body {
     flex-direction: column;
 }
 
+/* HEAD */
+
 header {
     top: 0px;
     width: 100%;
@@ -55,6 +57,27 @@ nav li a {
     margin:5px;
 }
 
+/*BUTTON*/
+
+.button {
+    font-family: monospace;
+    text-decoration: none;
+    border-radius: 20px;
+    color:rgb(10, 9, 7);
+    padding: 10px;
+    font-weight: 800;
+    background-color: rgb(106, 201, 169);
+}
+.button:hover {
+    color:rgb(238, 231, 237);
+    background-color: rgba(84, 172, 142, 0.986);
+}
+.button:active {
+    transform: translateY(1px);
+    filter: saturate(150%);
+}
+/* BANNER */
+
 .title {
     display: flex;
     flex-direction: column;
@@ -69,7 +92,6 @@ nav li a {
     color: rgb(199, 197, 190);
     font-family:monospace;
 }
-/* BANNER */
 
 .banner {
     display: flex;
@@ -88,6 +110,7 @@ nav li a {
     margin: 0 auto;
     bottom: 0;
 }
+
 
 /* INTRO */
 
@@ -115,8 +138,7 @@ nav li a {
     line-height: 1.5;
     letter-spacing: 1.1;
     z-index: 10;
-    backdrop-filter: blur(1px);
-}
+    }
 
 #intro h4 {
     font-size: 1.8rem;
@@ -148,4 +170,32 @@ nav li a {
 .codeProj img:hover {
     filter: brightness(1.25);
 
+}
+
+/* MEDIA tags*/
+
+
+@media screen and (max-width: 570px) {
+
+    
+    .title h3 {
+        font-size: 1.2rem;
+    }
+    #lewis{
+        font-size: 1.5rem;
+    }
+    #job{
+        font-size: 1rem;
+    }
+    #intro h4 {
+        font-size: 1.2rem;
+    }
+    #intro p {
+        font-size: 1rem;
+    }
+
+    .codeProj img {
+        width: 250px;
+        height: 200px;
+    }
 }
