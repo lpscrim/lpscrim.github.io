@@ -341,7 +341,7 @@ iframe {
     }
 }
 
-@media screen and (max-width: 563px) {
+@media screen and (max-width: 570px) {
     .listitem {
         display:none;
     }
@@ -362,7 +362,7 @@ iframe {
         height: auto;
         aspect-ratio: 16/9;
     }    
-    #I img{
+    #I{
         display: none;
     }
 }
@@ -371,10 +371,13 @@ iframe {
         font-size: 2rem;
     }
     #artist p, #artist H4{
-        font-size: 90%;
+        font-size: 120%;
     }
     #artist .textbox {
         width: 80%;
+    }
+    nav {
+        font-size: 120%;
     }
 
 }
