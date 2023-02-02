@@ -123,7 +123,7 @@ nav li a {
     width: auto;
     align-items: center;
     z-index: 1;
-    margin: 50px, auto;
+    
 }
 
 #intro .content {
@@ -138,17 +138,19 @@ nav li a {
     line-height: 1.5;
     letter-spacing: 1.1;
     z-index: 10;
+    margin: 30px, auto;
     }
 
-#intro h4 {
+.resize {
     font-size: 1.8rem;
 }
-#intro p {
-    font-size: 1.2rem;
+.resizep {
+    font-size: 1.4rem;
 }
 
 .skill.container {
     margin-top: 50px;
+    margin-bottom: 50px;
     flex-direction: row;
 }
 .skill img {
@@ -158,6 +160,7 @@ nav li a {
     height:50px;
     background-color: rgba(233, 223, 209, 0.774);
     border-radius: 5px;
+
 }
 /* CODE */
 
@@ -187,12 +190,9 @@ nav li a {
 /* MEDIA tags*/
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
     .button { 
         font-size: 150%;
-    }
-    header {
-        height: 8%;
     }
     #logo {
         width: 60px;
@@ -207,11 +207,11 @@ nav li a {
     #job{
         font-size: 1rem;
     }
-    #intro h4 {
-        font-size: 1.2rem;
+    .resize {
+        ;
     }
-    #intro p {
-        font-size: 1rem;
+    .resizep {
+        ;
     }
 
     .codeProj img {
