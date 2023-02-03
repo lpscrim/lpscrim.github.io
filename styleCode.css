@@ -194,7 +194,7 @@ nav li a {
 /* MEDIA tags*/
 
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
     .button { 
         font-size: 150%;
     }
