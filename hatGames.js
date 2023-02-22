@@ -107,9 +107,80 @@ class Field {
 
     return newField;
   }
+
+  solve(){
+    let solveX = 0;
+    let solveY = 0;
+    let testCount = 0;
+    
+    
+      while (win == 0){
+
+        console.log(this._field)
+        console.log(solveX)
+        console.log(solveY)
+        
+        if((this._field[solveY][solveX + 1] == hat)){
+          console.log("Solved!");
+          win = 1;
+        } else if(this._field[solveY + 1][solveX] == hat){
+          console.log("Solved!");
+          win = 1;
+        } else if(this._field[solveY][solveX - 1] == hat){
+          console.log("Solved!");
+          win = 1;
+        } else if(this._field[solveY - 1][solveX] == hat){
+          console.log("Solved!");
+          win = 1;
+
+        
+        } else if(this._field[solveY][solveX + 1] === fieldCharacter ){
+          solveX += 1;
+        } else if(this._field[solveY + 1][solveX] === fieldCharacter){
+          solveY += 1;
+        } else if(this._field[solveY][solveX - 1] === fieldCharacter){
+          solveX -= 1;
+        } else if(this._field[solveY - 1][solveX] === fieldCharacter){
+          solveY -= 1;
+        } 
+
+          else if(this._field[solveY][solveX + 1] === pathCharacter){
+          solveX += 1;
+          this._field[solveY][solveX] = 'E'
+        } else if(this._field[solveY + 1][solveX] === pathCharacter){
+          solveY += 1;
+          this._field[solveY][solveX] = 'E'
+        } else if(this._field[solveY][solveX - 1] === pathCharacter){
+          solveX -= 1;
+          this._field[solveY][solveX] = 'E'
+        } else if(this._field[solveY - 1][solveX] === pathCharacter){
+          solveY -= 1;
+          this._field[solveY][solveX] = 'E'
+        } else {
+          console.log('This game is impossible!');
+          win = 2;
+        }
+
+        this._field[solveY][solveX] = pathCharacter;
+        
+        
+        console.log(solveX)
+        console.log(solveY)
+
+        testCount += 1;
+        test.print();
+      }
+      if(testCount = 30){
+        win = 2;
+      }
+  }
+
+
 }
+
+
 let Nu = Field.generateField(6,6,17)
 console.log(Nu)
 let test = new Field(Nu)
 test.print()
-test.playGame()
+test.solve()
