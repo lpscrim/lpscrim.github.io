@@ -25,14 +25,14 @@ class Field {
       let input = prompt('Enter a direction!  (U/D/L/R)')
     
       if (input.toUpperCase() === 'U') {
-        if (x <= 0) {
+        if (y <= 0) {
           console.log('Cant go further up!');
         } else {
           y -= 1;
         }
 
       } else if (input.toUpperCase() === 'L') {
-        if (y <= 0) {
+        if (x <= 0) {
           console.log('Cant go further left!');
         } else {
           x -= 1;
@@ -56,13 +56,13 @@ class Field {
         console.log('invalid entry')
       }
 
-      if (this._field[y][x] == hat) {
+      if (this._field[y][x] === hat) {
         console.log('You found the hat! You win!')
         win = 1;
-      } else if (this._field[y][x] == hole) {
+      } else if (this._field[y][x] === hole) {
         console.log('You fell in a hole. Game Over')
         win = 2
-      } else if (this._field[y][x] == undefined) {
+      } else if (this._field[y][x] === undefined) {
         console.log('Trying to escape eh?')
       }
       else {
@@ -145,16 +145,16 @@ class Field {
           this._field[solveY][solveX] = '9'
         } 
         
-          else if((this._field[solveY][solveX + 1] == hat)){
+          else if((this._field[solveY][solveX + 1] === hat)){
           console.log("Solved!");
           win = 1;
-        } else if(this._field[solveY + 1][solveX] == hat){
+        } else if(this._field[solveY + 1][solveX] === hat){
           console.log("Solved!");
           win = 1;
-        } else if(this._field[solveY][solveX - 1] == hat){
+        } else if(this._field[solveY][solveX - 1] === hat){
           console.log("Solved!");
           win = 1;
-        } else if(this._field[solveY - 1][solveX] == hat){
+        } else if(this._field[solveY - 1][solveX] === hat){
           console.log("Solved!");
           win = 1; 
         } else {
