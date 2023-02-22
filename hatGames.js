@@ -120,21 +120,8 @@ class Field {
         console.log(solveX)
         console.log(solveY)
         
-        if((this._field[solveY][solveX + 1] == hat)){
-          console.log("Solved!");
-          win = 1;
-        } else if(this._field[solveY + 1][solveX] == hat){
-          console.log("Solved!");
-          win = 1;
-        } else if(this._field[solveY][solveX - 1] == hat){
-          console.log("Solved!");
-          win = 1;
-        } else if(this._field[solveY - 1][solveX] == hat){
-          console.log("Solved!");
-          win = 1;
-
-        
-        } else if(this._field[solveY][solveX + 1] === fieldCharacter ){
+                
+        if(this._field[solveY][solveX + 1] === fieldCharacter ){
           solveX += 1;
         } else if(this._field[solveY + 1][solveX] === fieldCharacter){
           solveY += 1;
@@ -146,16 +133,30 @@ class Field {
 
           else if(this._field[solveY][solveX + 1] === pathCharacter){
           solveX += 1;
-          this._field[solveY][solveX] = 'E'
+          this._field[solveY][solveX] = '9'
         } else if(this._field[solveY + 1][solveX] === pathCharacter){
           solveY += 1;
-          this._field[solveY][solveX] = 'E'
+          this._field[solveY][solveX] = '9'
         } else if(this._field[solveY][solveX - 1] === pathCharacter){
           solveX -= 1;
-          this._field[solveY][solveX] = 'E'
+          this._field[solveY][solveX] = '9'
         } else if(this._field[solveY - 1][solveX] === pathCharacter){
           solveY -= 1;
-          this._field[solveY][solveX] = 'E'
+          this._field[solveY][solveX] = '9'
+        } 
+        
+          else if((this._field[solveY][solveX + 1] == hat)){
+          console.log("Solved!");
+          win = 1;
+        } else if(this._field[solveY + 1][solveX] == hat){
+          console.log("Solved!");
+          win = 1;
+        } else if(this._field[solveY][solveX - 1] == hat){
+          console.log("Solved!");
+          win = 1;
+        } else if(this._field[solveY - 1][solveX] == hat){
+          console.log("Solved!");
+          win = 1; 
         } else {
           console.log('This game is impossible!');
           win = 2;
@@ -170,7 +171,7 @@ class Field {
         testCount += 1;
         test.print();
       }
-      if(testCount = 30){
+      if(testCount >= 30){
         win = 2;
       }
   }
